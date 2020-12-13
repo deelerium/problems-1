@@ -127,8 +127,7 @@ export class AppComponent {
     console.log(this.resultC);
     if (isNaN(this.resultC)) {
       this.msg = true;
-      return (this.resultC =
-        "<span style='color:red'>Primero debes generar los 2 array's!</span>");
+      return (this.resultC = "Primero debes generar los 2 array's!!");
     } else {
       this.msg = false;
       return this.resultC;
