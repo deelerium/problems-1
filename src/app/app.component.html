@@ -81,11 +81,5 @@
 </label>
 <button type="submit" (click)="sumTwoArray()">Suma</button>
 
-<p>Array2:</p>
-<div class="lista">
-  <ul>
-    <li *ngFor="let item of boxArrSum">{{item}},</li>
-  </ul>
-</div>
-<br />
-</div>
+<p *ngIf="!msg">Suma: {{resultC}}</p>
+<p *ngIf="msg">Suma: Primero genera los dos array's</p>

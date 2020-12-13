@@ -19,7 +19,7 @@ export class AppComponent {
   box: any = [];
   box2: any = [];
   box3: any = [];
-  boxArrSum: any = [];
+  msg: boolean = false;
 
   fraseForm = new FormGroup({
     frase: new FormControl(""),
@@ -122,8 +122,11 @@ export class AppComponent {
   }
 
   sumTwoArray() {
-    this.resultC = this.box2[0] + this.box3[9];
-    this.boxArrSum.push(this.resultC);
-    console.log(this.boxArrSum);
+    if (this.box2.length && this.box3.length === 0) {
+      this.msg = true;
+    } else {
+      this.resultC = this.box2[0] + this.box3[9];
+      this.msg = false;
+    }
   }
 }
