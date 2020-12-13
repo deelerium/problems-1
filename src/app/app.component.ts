@@ -8,6 +8,7 @@ import { FormGroup, FormControl } from "@angular/forms";
 })
 export class AppComponent {
   numNegativ: boolean = false;
+  msg: boolean = false;
   resultA: any = "";
   resultA1: any = "";
   resultA2: any = "";
@@ -19,7 +20,6 @@ export class AppComponent {
   box: any = [];
   box2: any = [];
   box3: any = [];
-  msg: boolean = false;
 
   fraseForm = new FormGroup({
     frase: new FormControl(""),
@@ -124,12 +124,10 @@ export class AppComponent {
   sumTwoArray() {
     this.resultC = this.box2[0] + this.box3[9];
     console.log(this.resultC);
-    if (this.resultC !== NaN) {
-      this.msg = false;
-      console.log(this.msg);
-    } else {
+    if (isNaN(this.resultC)) {
       this.msg = true;
-      console.log(this.msg);
+    } else {
+      this.msg = false;
     }
   }
 }
