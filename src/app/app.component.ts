@@ -1,3 +1,4 @@
+import { style } from "@angular/animations";
 import { Component } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
 
@@ -126,8 +127,11 @@ export class AppComponent {
     console.log(this.resultC);
     if (isNaN(this.resultC)) {
       this.msg = true;
+      return (this.resultC =
+        "<span style='color:red'>Primero debes generar los 2 array's!</span>");
     } else {
       this.msg = false;
+      return this.resultC;
     }
   }
 }
