@@ -122,11 +122,14 @@ export class AppComponent {
   }
 
   sumTwoArray() {
-    if (this.box2.length && this.box3.length === 0) {
-      this.msg = true;
-    } else {
-      this.resultC = this.box2[0] + this.box3[9];
+    this.resultC = this.box2[0] + this.box3[9];
+    console.log(this.resultC);
+    if (this.resultC !== NaN) {
       this.msg = false;
+      console.log(this.msg);
+    } else {
+      this.msg = true;
+      console.log(this.msg);
     }
   }
 }
