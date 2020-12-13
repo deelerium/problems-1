@@ -113,7 +113,6 @@ export class AppComponent {
       n = Math.floor(n) + 1;
       this.box2.push(n);
     }
-
     for (let j = 0; j < 10; j++) {
       var m = Math.random();
       m *= 100;
@@ -125,5 +124,6 @@ export class AppComponent {
   sumTwoArray() {
     this.resultC = this.box2[0] + this.box3[9];
     this.boxArrSum.push(this.resultC);
+    console.log(this.boxArrSum);
   }
 }

@@ -58,7 +58,7 @@
 </div>
 <div>
   <label for="">1. Genera 2 array's con 10 números aleatorios cada uno:</label>
-  <button (click)="twoArr">2 Array's</button>
+  <button type="submit" (click)="twoArr()">2 Array's</button>
   <br />
   <p>Array1:</p>
   <div class="lista">
@@ -66,14 +66,7 @@
       <li *ngFor="let item of box2">{{item}},</li>
     </ul>
   </div>
-  <br />
 
-  <label for="">
-    2.Generar un nuevo array con la suma del primer número del array1 con el
-    último número del array2
-  </label>
-  <button (click)="sumTwoArray()">Suma</button>
-  <br />
   <p>Array2:</p>
   <div class="lista">
     <ul>
@@ -81,4 +74,18 @@
     </ul>
   </div>
   <br />
+</div>
+<label for="">
+  2.Generar un nuevo array con la suma del primer número del array1 con el
+  último número del array2
+</label>
+<button type="submit" (click)="sumTwoArray()">Suma</button>
+
+<p>Array2:</p>
+<div class="lista">
+  <ul>
+    <li *ngFor="let item of boxArrSum">{{item}},</li>
+  </ul>
+</div>
+<br />
 </div>
