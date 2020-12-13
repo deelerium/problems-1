@@ -39,18 +39,22 @@ export class AppComponent {
       //termina el programa
       console.log("termina programa");
       console.log(this.box);
-      // mayor numero introducido:
-      this.largestNumber(this.box);
-      // menor numero introducido:
-      this.smallestNumber(this.box);
-      // suma de todos los numeros:
-      this.sumAll(this.box);
-      // suma de los numeros positivos:
-      this.sumPositive(this.box);
-      // suma de los numeros negativos:
-      this.sumNegative(this.box);
-      // media de la suma:
-      this.mediaSum(this.box);
+      if (this.box.length !== 0) {
+        // mayor numero introducido:
+        this.largestNumber(this.box);
+        // menor numero introducido:
+        this.smallestNumber(this.box);
+        // suma de todos los numeros:
+        this.sumAll(this.box);
+        // suma de los numeros positivos:
+        this.sumPositive(this.box);
+        // suma de los numeros negativos:
+        this.sumNegative(this.box);
+        // media de la suma:
+        this.mediaSum(this.box);
+      } else {
+        console.log("no numbers");
+      }
     }
     this.numbersForm.reset();
   }
