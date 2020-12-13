@@ -1,0 +1,7 @@
+span {
+  color: red;
+}
+.lista > ul > li {
+  list-style: none;
+  display: inline;
+}

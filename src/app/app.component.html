@@ -1,0 +1,71 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <form [formGroup]="numbersForm" (ngSubmit)="addNumber()">
+    <p>
+      A) Pedir números al usuario y cuando el usuario meta un -1 se terminará el
+      programa.Al terminar, mostrará lo siguiente:
+    </p>
+    <br />
+    <input type="number" formControlName="numbers" />
+
+    <button type="submit">Add</button>
+    <span *ngIf="numNegativ">
+      Se a introducido el numero -1,se termino el programa!</span
+    >
+    <br />
+    <div class="lista">
+      <ul>
+        <li *ngFor="let item of box; index as i">{{item}},</li>
+      </ul>
+    </div>
+
+    <ul>
+      <li>mayor numero introducido: {{resultA}}</li>
+      <li>menor numero introducido: {{resultA1}}</li>
+      <li>suma de todos los numeros: {{resultA2}}</li>
+      <li>suma de los numeros positivos: {{resultA3}}</li>
+      <li>suma de los numeros negativos: {{resultA4}}</li>
+      <li>media de la suma: {{resultA5}}</li>
+    </ul>
+    <p>El número -1 no contara como número.</p>
+  </form>
+</div>
+<div>
+  <p>
+    B) Pedir un texto y una letra, luego imprimir el texto eliminando las letras
+    que coincidan con la que se introdujo.
+  </p>
+  <div>
+    <form [formGroup]="fraseForm" (ngSubmit)="fraseSubmit()">
+      <label for="text">Introduce una frase:</label><br />
+      <input type="text" formControlName="frase" /><br /><br />
+
+      <label for="text">Introduce la letra que quieres quitar:</label><br />
+      <input type="text" formControlName="letter" /><br /><br />
+
+      <button type="submit">Eliminar letra</button><br /><br />
+      <label for="result">Result: </label>
+      <p>{{resultB}}</p>
+    </form>
+  </div>
+</div>
+<div>
+  <p>
+    C) Generar dos array con 10 números aleatorios cada uno, luego generar un
+    nuevo array con la suma del primer número del array1 con el último número
+    del array2 y así sucesivamente ..e imprimir los valores del nuevo array
+  </p>
+</div>
+<div>
+  <label for="">1. Genera 2 array's con 10 números aleatorios cada uno:</label>
+  <button>2 Array's</button>
+  <br />
+
+  <br />
+
+  <label for="">
+    2.Generar un nuevo array con la suma del primer número del array1 con el
+    último número del array2
+  </label>
+  <button>Suma</button><br /><br />
+</div>
