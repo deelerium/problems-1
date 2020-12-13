@@ -17,9 +17,10 @@ export class AppComponent {
   resultB: any = "";
   resultC: any = "";
   box: any = [];
-  box2 = [];
-  box3 = [];
-  boxSum: any = [];
+  box2: any = [];
+  box3: any = [];
+  boxArrSum: any = [];
+
   fraseForm = new FormGroup({
     frase: new FormControl(""),
     letter: new FormControl("")
@@ -89,7 +90,7 @@ export class AppComponent {
   }
 
   mediaSum(arr) {
-    this.resultA5 = this.resultA2 / arr.length;
+    this.resultA5 = Math.floor(this.resultA2 / arr.length);
   }
 
   // Problem B
@@ -105,4 +106,24 @@ export class AppComponent {
   }
 
   // Problem C
+  twoArr() {
+    for (let z = 0; z < 10; z++) {
+      var n = Math.random();
+      n *= 100;
+      n = Math.floor(n) + 1;
+      this.box2.push(n);
+    }
+
+    for (let j = 0; j < 10; j++) {
+      var m = Math.random();
+      m *= 100;
+      m = Math.floor(m) + 1;
+      this.box3.push(m);
+    }
+  }
+
+  sumTwoArray() {
+    this.resultC = this.box2[0] + this.box3[9];
+    this.boxArrSum.push(this.resultC);
+  }
 }
